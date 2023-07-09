@@ -29,6 +29,9 @@ public class SkyblockAPI {
         return "epic fail";
     }
 
+    public static String getCanuckStatus() {
+        return getJson("/status");
+    }
     public static Bazaar getBazaar() {
         updateBazaar();
         return bazaar;
