@@ -55,7 +55,11 @@ public class Main {
             );
 
          */
-        //Constants.bot = new SkyblockBot();
+        try {
+            Constants.bot = new SkyblockBot();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         DiscordApi api = new DiscordApiBuilder()
             .setToken(apiKey)
             .setAllIntents()
@@ -63,10 +67,10 @@ public class Main {
             .join();
         api.addListener(new Ping());
         api.addListener(new Ping2());
-        //api.addListener(new Skyblock());
-        //api.addListener(new BuyMithrilEqualPriceCommand());
-        api.addListener(new WhoIsNumber());
-        api.addListener(new CompareTeams());
+        api.addListener(new Skyblock());
+        api.addListener(new BuyMithrilEqualPriceCommand());
+        //api.addListener(new WhoIsNumber());
+        //api.addListener(new CompareTeams());
 
         /*
         Timer timer = new Timer();
@@ -91,7 +95,7 @@ public class Main {
         */
 
 
-
+        /*
         String line1 = "1 25544U 98067A   23151.45322602  .00018605  00000-0  32920-3 0  9995";
         String line2 = "2 25544  51.6408  51.4928 0005626  37.0943 118.6565 15.50332720399191";
         while (true) {
@@ -107,6 +111,8 @@ public class Main {
 
             System.out.printf("Greenwich Sidereal Time is %.0f:%.0f:%.2f%n", hours, minutes, seconds);
         }
+
+         */
 
     }
 

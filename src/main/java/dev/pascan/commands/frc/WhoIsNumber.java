@@ -13,7 +13,7 @@ public class WhoIsNumber implements MessageCreateListener {
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
         String m = event.getMessageContent();
-        if (m.startsWith("!") && !m.contains("compare")) {
+        if (m.startsWith("!t") && !m.contains("compare")) {
             System.out.println(m);
             try {
                 int teamNumber = 1;
